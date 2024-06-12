@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web LLM EEVE</title>
+  </head>
+  <body>
+    <link href="./index.css" rel="stylesheet" type="text/css" />
+
+    <div class="container">
+      <div class="chatui-logo">
+        <div class="chatui-icon"></div>
+        <h1>EEVE on Web GPU</h1>
+        <p>
+          Thanks to
+          <a
+            href="https://huggingface.co/yanolja/EEVE-Korean-Instruct-10.8B-v1.0"
+            >yanolja/EEVE-Korean-Instruct-10.8B-v1.0</a
+          >,
+          <a href="https://github.com/mlc-ai/web-llm">web-llm</a>
+        </p>
+      </div>
+
+      <div class="chatui">
+        <div class="chatui-chat" id="chatui-chat" height="100"></div>
+
+        <div class="chatui-inputarea">
+          <input
+            id="chatui-input"
+            type="text"
+            class="chatui-input"
+            placeholder="Enter your message..."
+          />
+          <button id="chatui-send-btn" class="chatui-send-btn"></button>
+          <button id="chatui-reset-btn" class="chatui-reset-btn"></button>
+        </div>
+      </div>
+
+      <div class="chatui-extra-control">
+        <label id="chatui-info-label"></label>
+      </div>
+    </div>
+    <!--- Place script after ui to make sure ui loads first -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
